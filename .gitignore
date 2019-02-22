@@ -1,0 +1,13 @@
+/**/node_modules
+/**/.settings/
+/**/.classpath
+/**/.gwt
+/**/.project
+/**/target
+/**/.history/
+/**/gwt-unitCache/
+/**/dist/
+/**/.factorypath
+/**/*.DS_Store
+/**/bin/
+

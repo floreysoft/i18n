@@ -1,11 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.apache.commons</groupId>
-    <artifactId>commons-sandbox-parent</artifactId>
-    <version>9</version>
-  </parent>
+  <groupId>org.apache.commons</groupId>
   <artifactId>commons-i18n</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>Apache Commons i18n (Sandbox)</name>
@@ -143,10 +139,9 @@
     </plugins>
   </reporting>
   <distributionManagement>
-    <site>
-      <id>website</id>
-      <name>Apache Website</name>
-      <url>scp://people.apache.org/www/commons.apache.org/sandbox/i18n/</url>
-    </site>
-  </distributionManagement>
+      <repository>
+          <id>floreysoft</id>
+          <url>file:../maven-repo</url>
+      </repository>
+  </distributionManagement>  
 </project>

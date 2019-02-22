@@ -1,0 +1,10 @@
+{
+  "name": "commons-i18n",
+  "version": "1",
+  "description": "Apache Commons i18n",
+  "author": "Floreysoft",
+  "private": false,
+  "scripts": {  
+    "deploy": "mvn deploy" 
+  }
+}
