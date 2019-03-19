@@ -5,6 +5,6 @@
   "author": "Floreysoft",
   "private": false,
   "scripts": {  
-    "deploy": "mvn deploy && yarn --cwd ../maven-repo/ deploy" 
+    "deploy": "mvn deploy && yarn --cwd ../maven-repo/ push" 
   }
 }

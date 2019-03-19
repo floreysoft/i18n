@@ -142,11 +142,11 @@
   <distributionManagement>
     <repository>
       <id>floreysoft-releases</id>
-      <url>file:../../maven-repo/releases</url>
+      <url>file:../maven-repo/releases</url>
     </repository>
     <snapshotRepository>
         <id>floreysoft-snapshot</id>
-        <url>file:../../maven-repo/snapshots</url>
+        <url>file:../maven-repo/snapshots</url>
     </snapshotRepository>    
   </distributionManagement>
   
