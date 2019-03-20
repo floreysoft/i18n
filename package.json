@@ -6,7 +6,9 @@
   "private": false,
   "scripts": {  
     "build": "yarn && cross-var \"mvn install -Drevision=$npm_package_version\"",
-    "deploy": "yarn && cross-var \"mvn deploy -Drevision=$npm_package_version\" && yarn --cwd ../maven-repo/ push"
+    "predeploy" : "yarn --cwd ../maven-repo/ pull",
+    "postdeploy": "yarn --cwd ../maven-repo/ push",
+    "deploy": "yarn && cross-var \"mvn deploy -Drevision=$npm_package_version\""
   },
   "devDependencies": {
     "cross-var": "^1.1.0"
