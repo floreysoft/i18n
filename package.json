@@ -1,10 +1,14 @@
 {
   "name": "commons-i18n",
-  "version": "1",
+  "version": "1.0-SNAPSHOT",
   "description": "Apache Commons i18n",
   "author": "Floreysoft",
   "private": false,
   "scripts": {  
-    "deploy": "mvn deploy && yarn --cwd ../maven-repo/ push" 
+    "build": "yarn && cross-var \"mvn install -Drevision=$npm_package_version\"",
+    "deploy": "yarn && cross-var \"mvn deploy -Drevision=$npm_package_version\" && yarn --cwd ../maven-repo/ push"
+  },
+  "devDependencies": {
+    "cross-var": "^1.1.0"
   }
 }
