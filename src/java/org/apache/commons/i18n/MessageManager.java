@@ -108,11 +108,15 @@ public class MessageManager {
         if(messageProviders.isEmpty())
             throw new MessageNotFoundException("No MessageProvider registered");
         for (Iterator i = messageProviders.values().iterator(); i.hasNext();) {
+            try {
             String text = ((MessageProvider) i.next()).getText(id, entry,
                     locale);
             if(text != null)
                 return (arguments != null && arguments.length > 0) ?
                         MessageFormat.format(text, arguments) : text;
+            } catch ( MessageNotFoundException e ) {
+                // Ignore and proceed with next messager provider
+            }
         }
         throw new MessageNotFoundException(MessageFormat.format(
                 I18nUtils.INTERNAL_MESSAGES.getString(I18nUtils.MESSAGE_ENTRY_NOT_FOUND),
